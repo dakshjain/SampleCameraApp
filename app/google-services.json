@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "584193546284",
+    "firebase_url": "https://marsplaycameraapp.firebaseio.com",
+    "project_id": "marsplaycameraapp",
+    "storage_bucket": "marsplaycameraapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584193546284:android:71f17c4199355f3f3c9989",
+        "android_client_info": {
+          "package_name": "com.example.marsplayassignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "584193546284-cvh1s7e7tr7o2073tkjb604n8qqi4s0o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCKaIPuPvVY2VAOw6zcQXNT8Sj-tEFAjg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "584193546284-cvh1s7e7tr7o2073tkjb604n8qqi4s0o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
