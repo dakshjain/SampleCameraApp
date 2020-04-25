@@ -1,4 +1,4 @@
-package com.example.marsplayassignment;
+package com.example.marsplayassignment.view;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,13 +10,18 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+
+import com.example.marsplayassignment.R;
+import com.example.marsplayassignment.databinding.ActivityHomeBinding;
+import com.example.marsplayassignment.model.Response;
+import com.example.marsplayassignment.viewmodel.HomePageViewModel;
 
 import java.io.File;
 import java.io.IOException;
@@ -39,12 +44,12 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         AndroidInjection.inject(this);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+
+        ActivityHomeBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_home);
 
         homePageViewModel = new ViewModelProvider(this, viewModelFactory).get(HomePageViewModel.class);
 
-        Button button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        binding.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 try {
@@ -52,6 +57,20 @@ public class HomeActivity extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+            }
+        });
+
+        binding.cameraButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, CameraView.class));
+            }
+        });
+
+        binding.btnPreview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, PreviewActivity.class));
             }
         });
 

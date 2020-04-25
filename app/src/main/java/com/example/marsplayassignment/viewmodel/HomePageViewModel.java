@@ -1,15 +1,13 @@
-package com.example.marsplayassignment;
+package com.example.marsplayassignment.viewmodel;
 
-import android.app.Application;
 import android.net.Uri;
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import java.util.ArrayList;
+import com.example.marsplayassignment.repository.HomePageRepository;
+import com.example.marsplayassignment.model.Response;
 
 import javax.inject.Inject;
 
@@ -17,14 +15,13 @@ import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
-import io.reactivex.Scheduler;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
 public class HomePageViewModel extends ViewModel {
 
     HomePageRepository homePageRepository;
-    MutableLiveData uploadStatus = new MutableLiveData();
+    public MutableLiveData uploadStatus = new MutableLiveData();
 
     @Inject
     public HomePageViewModel(HomePageRepository homePageRepository) {

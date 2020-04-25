@@ -1,4 +1,4 @@
-package com.example.marsplayassignment;
+package com.example.marsplayassignment.model;
 
 public enum Response {
     LOADING , SUCCESS, ERROR

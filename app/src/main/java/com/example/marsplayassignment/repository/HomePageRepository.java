@@ -1,6 +1,9 @@
-package com.example.marsplayassignment;
+package com.example.marsplayassignment.repository;
 
 import android.net.Uri;
+
+import com.example.marsplayassignment.model.Response;
+import com.example.marsplayassignment.network.WebService;
 
 import javax.inject.Inject;
 
